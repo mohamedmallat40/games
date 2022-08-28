@@ -54,6 +54,7 @@ export class GamesListComponent implements OnInit {
 
   public clearFilters(): void {
     this.games = this.initialState;
+    this.message = ''
   }
 
 }
