@@ -1,0 +1,67 @@
+@import '/src/assets/scss/variables';
+
+.menu {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        color: $secondary-color;
+        text-transform: uppercase;
+    }
+
+    &-item {
+        font-size: $text-2lg;
+        margin: 0;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &-games {
+        &::before {
+            position: absolute;
+            content: 'VIDEO';
+            color: $dark-bg;
+            top: -75%;
+            z-index: -1;
+            left: -10%;
+            font-size: $text-2xl;
+        }
+    }
+
+    &-contact {
+        &::before {
+            position: absolute;
+            content: 'CONTACT';
+            color: $dark-bg;
+            top: -75%;
+            z-index: -1;
+            left: -10%;
+            font-size: $text-2xl;
+        }
+    }
+}
+
+@media only screen and (max-width:$sm) {
+    .menu {
+        &-games {
+            &::before {
+                left: -1%;
+                font-size: $text-xl;
+                top: -55%;
+
+            }
+        }
+        &-contact{
+            &::before {
+                font-size: $text-xl;
+                top: -55%;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import '/src/assets/scss/variables';
+
+.contact{
+    display: block;
+    margin:auto;
+    max-width: 600px;
+    color: $primary-color;
+    &-text{
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+    }
+    &-text_title{
+        font-size: $text-2lg;
+        color: $secondary-color;
+        font-weight: 600;
+    }
+    .contact-form{
+        background-color: $secondary-bg;
+        padding: 1rem 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    .form-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        flex-wrap:wrap ;
+        gap: 2rem;
+        .form-input{
+            flex-grow: 1;
+        }
+    }
+    .btn-primary{
+        margin-top: 2rem;
+        margin-left: auto;
+        display: block;
+    }
+}
+
+small {
+    color: red;
+}

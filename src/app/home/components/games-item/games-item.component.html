@@ -1,0 +1,12 @@
+<div class="games-item">
+  <div class="games-item_img_container">
+  <img class="games-item_img"/>
+</div>
+  <div class="games-item_desc">
+    <span class="title">{{game?.name}}</span>
+    <span class="date">Release Date: {{game?.first_release_date | date: 'dd/MM/yyyy'}}</span>
+    <span class="description">{{game?.summary}}</span>
+  </div>
+  <div class="games-item_number">
+    <span>{{game?.rating?.toFixed(0)}}</span></div>
+</div>

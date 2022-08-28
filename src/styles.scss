@@ -1,0 +1,63 @@
+@import 'assets/scss/_fonts.scss';
+@import 'assets/scss/_variables.scss';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    min-height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-image: $primary-bg;
+    padding: 2rem;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+.form-input{
+    display: flex;
+    flex-direction: column;
+    input,select,textarea{
+   background-color: $dark-bg;
+   border: none;
+   color: $primary-color;
+    padding: .3rem .5rem;
+   &::placeholder{
+    color: $primary-color;
+   }
+    }
+    label{
+        color: $secondary-color;
+    }
+
+}
+.btn-primary{
+    background-color: $light-bg;
+    border: none;
+    cursor: pointer;
+    &:focus{
+        outline: 1px solid $light-bg;
+    }
+    color: $secondary-color;
+    padding: .3rem 1rem;
+}
+@media  only screen and (max-width:$sm) {
+    body{
+   padding:.5rem ;     
+    }
+}

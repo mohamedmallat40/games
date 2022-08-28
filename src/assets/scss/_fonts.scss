@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Mulish";
+  src: local("Mulish"), url(../fonts/Mulish-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+  font-family: 'Mulish';
+}
+
+label, button, h* {
+  font-family: 'Montserrat';
+}
+

@@ -1,0 +1,45 @@
+<div class="contact">
+  <div class="contact-text">
+    <span class="contact-text_title">GET IN TOUCH</span>
+    <span class="contact-text_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</span>
+  </div>
+  <div class="contact-form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <h2>Contact Form</h2>
+        <div class="form-group">
+          <div class="form-input">
+            <label>Name*</label>
+            <input type="text" formControlName="name">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)">
+              <div [hidden]="!name.errors.required">
+                <small>Name is required</small>
+              </div>
+            </div>
+          </div>  
+          <div class="form-input">
+            <label>Email*</label>
+            <input type="text" formControlName="email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+              <div [hidden]="!email.errors.required">
+                <small >Email is required</small>
+              </div>
+              <div [hidden]="!email.errors.email">
+                <small>Invalid Email format</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-input">
+          <label>Message*</label>
+          <textarea name="" id="" cols="30" rows="5" formControlName="message"></textarea>
+          <div *ngIf="message.invalid && (message.dirty || message.touched)">
+            <div [hidden]="!message.errors.required">
+              <small>Message is required</small>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary" type="submit" [disabled]="contactForm.invalid">Send</button>
+    </form>
+  </div>
+</div>
+

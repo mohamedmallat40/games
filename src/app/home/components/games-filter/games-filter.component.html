@@ -1,0 +1,29 @@
+<div class="games-filter">
+  <div class="games-filter_title">
+    Filter Results </div>
+  <div class="games-filter_form">
+    <div class="form-input">
+      <label for="name">Name(cotains)</label>
+      <input id="name" type="text" (input)="searchString($event)"/>
+    </div>
+    <div class="input-group">
+      <div class="form-input">
+        <label for="score">Minimum Score</label>
+        <input id="score" type="number" (input)="searchByMinRating($event)" />
+      </div>
+      <div class="form-input form-select">
+        <label for="">Order By</label>
+        <div class="filter-select"> <button class="btn-up btn-primary">
+          <svg class="icon-arrow-up">
+            <use xlink:href="assets/symbol-defs.svg#icon-arrow-up2"></use>
+          </svg>
+        </button>
+        <select (change)="onChangeKey($event)">
+          <option *ngFor="let option of searchKeys | keyvalue" [value]="option.value" >{{option.value}}</option>
+        </select>
+      </div>
+      </div>
+      <button class="btn-primary btn-clear" (click)="onClear()">Clear</button>
+    </div>
+  </div>
+</div>
